@@ -17,7 +17,7 @@ Tic Tac Toe is known by a few other names around the world. The most common of t
 
 [Checkout the demo](https://hampshire-nasturtium.netlify.app/)
 
-[![screenshot](Img/preview.png)](https://hampshire-nasturtium.netlify.app/)
+<a align="center" href="https://trickytoe-smakager.netlify.app/"><img align="center" src="Img/preview.png"/></a>
 
 ### Built With
 
