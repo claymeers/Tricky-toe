@@ -15,9 +15,9 @@ Tic-Tac-Toe is a long beloved classic pen and paper or board game for two player
 
 Tic Tac Toe is known by a few other names around the world. The most common of these is "Noughts and Crosses" and it is sometimes simply referred to as the "XO game."
 
-[Checkout the demo](https://hampshire-nasturtium.netlify.app/)
+[Checkout the demo](https://trickytoe-smakager.netlify.app/)
 
-<a align="center" target="_blank" href="https://trickytoe-smakager.netlify.app/"><img align="center" src="Img/preview.png"/></a>
+[![screenshot](Img/preview.png)](https://trickytoe-smakager.netlify.app/)
 
 ### Built With
 
@@ -32,7 +32,7 @@ Tic Tac Toe is known by a few other names around the world. The most common of t
 - [x] 👣 **Multiscreen** - multiscreen page: start page, game board, congrats page, etc
 - [x] ⛩️  **Design** - Minimalist stunning design
 - [ ] 🤖 **AI** - an unbeatable AI using the minimax algorithm
-- [] 🍕  **MMO** - you can play with your friend online via a link
+- [ ] 🍕  **MMO** - you can play with your friend online via a link
 - [x] 🗽  **Names** - the interface allow players to put in their names
  
 ## Resources
