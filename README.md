@@ -45,6 +45,7 @@ Tic Tac Toe is known by a few other names around the world. The most common of t
 
 - [Try tucking everything away inside of a module or factory](https://www.theodinproject.com/lessons/node-path-javascript-factory-functions-and-the-module-pattern)
 - **Game logic** - check for 3-in-a-row and a tie.
+- **Refactoring code** - using factory functions and modular functions
   
 ## Author
 

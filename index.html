@@ -13,39 +13,40 @@
     <h1 class="title">Tic Tac Toe</h1>
     <section class="page game off">
         <div class="gameboard">
-            <div class="square">x</div>
-            <div class="square">o</div>
-            <div class="square line">x</div>
-            <div class="square">o</div>
-            <div class="square line">x</div>
-            <div class="square">o</div>
-            <div class="square line">x</div>
-            <div class="square">x</div>
-            <div class="square">o</div>
+            <div data-index="0" class="square"></div>
+            <div data-index="1" class="square"></div>
+            <div data-index="2" class="square"></div>
+            <div data-index="3" class="square"></div>
+            <div data-index="4" class="square"></div>
+            <div data-index="5" class="square"></div>
+            <div data-index="6" class="square"></div>
+            <div data-index="7" class="square"></div>
+            <div data-index="8" class="square"></div>
         </div>
         <div class="scoreboard">
-            <span class="bar"></span>
-            <div class="player-scoreboard mask">
+            <div class="player-scoreboard mask active">
                 <p class="score">3</p>
                 <p class="player">
                     <span class="marker"><i class="uil uil-multiply"></i></span>
-                    <span class="name">Naveen</span>
+                    <span class="name">liam</span>
                 </p>
+                <span class="bar"></span>
             </div>
-            <div class="ai-scoreboard mask not-my-turn">
+            <div class="player2-scoreboard mask">
                 <p class="score">1</p>
                 <p class="player">
                     <span class="marker"><i class="uil uil-circle"></i></span>
-                    <span class="name">Gamora</span>
+                    <span class="name">Reeves</span>
                 </p>
+                <span class="bar"></span>
             </div>
-            <div class="player2-scoreboard mask off">
+            <!-- <div class="player2-scoreboard mask off">
                 <p class="score">2</p>
                 <p class="player">
                     <span class="marker"><i class="uil uil-circle"></i></span>
                     <span class="name">Reeves</span>
                 </p>
-            </div>
+            </div> -->
         </div>
         <div class="restart">
             <i class="uil uil-redo"></i>
@@ -66,16 +67,16 @@
             </div>
         </div>
     </section>
-    <section class="page popup">
+    <section class="page popup off">
         <div class="cheers">
             <img src="Img/confetti.png" alt="">
         </div>
         <p class="win"><span class="winner">Wade</span> wins !</p>
-        <div class="again">
+        <div class="again playAgain">
             <i class="uil uil-cloud-showers-alt"></i>
             Play again
         </div>
-        <div class="again">
+        <div class="again new">
             <i class="uil uil-wind"></i>
             New opponent
         </div>
@@ -86,7 +87,7 @@
             <div class="strange">
                 <input type="text" placeholder="Naveen">
             </div>
-            <div class="strange">
+            <div class="strange opponent">
                 <input type="text" placeholder="Craig">
             </div>
         </div>

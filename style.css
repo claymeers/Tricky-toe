@@ -47,6 +47,7 @@ body {
     width: 100vw;
     position: absolute;
     top: 50%;
+    transition: all 0.3s ease-in-out;
 }
 
 .game {
@@ -72,6 +73,11 @@ body {
     opacity: 0.5;
     color: #6a706e;
     font-family: 'Permanent Marker', cursive;
+    transition: all 0.3s ease-in-out;
+}
+
+.square:hover {
+    background-color: #6a716f1f;
 }
 
 .square:nth-child(n + 4) {
@@ -86,12 +92,34 @@ body {
     display: flex;
     flex-direction: row;
     margin-top: 6em;
-    position: relative;
 }
 
 .mask {
     user-select: none;
     margin: 0em 3em;
+    opacity: 0.2;
+    min-width: 112px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.name {
+    font-size: 2.3rem;
+    font-weight: normal;
+    transition: all 0.5s ease;
+}
+
+.bar::before {
+    content: '';
+    width: 0;
+    transform: translateX(0);
+    height: 2px;
+    background-color: #0e1116;
+    position: absolute;
+    bottom: -.2rem;
+    left: -10px;
+    border-radius: 25px;
+    transition: all 0.5s ease;
 }
 
 .score {
@@ -104,33 +132,20 @@ body {
     margin-right: 0.5em;
 }
 
-.name {
-    font-size: 2.3rem;
+.mask.active .name {
     font-weight: bold;
 }
 
-.mask.not-my-turn .name {
-    font-weight: normal;
+.mask.active .bar::before {
+    width: calc(100% + 20px);
 }
 
-.mask.not-my-turn {
-    opacity: 0.5;
+.mask.active {
+    opacity: 1;
 }
 
 .line {
     color: #000;
-}
-
-.bar {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    width: 130px;
-    height: 2px;
-    background-color: #0e1116;
-    border-radius: 10px;
-    transform: translateX(23px);
-    /* transform: translateX(calc(100% + 50px)); */
 }
 
 i {
