@@ -164,8 +164,9 @@ i {
     cursor: pointer;
     opacity: 0.2;
     transition: all 0.4s ease-in-out;
-    position: absolute;
-    bottom: 7rem;
+    margin-top: 5rem;
+    /* position: absolute;
+    bottom: 7rem; */
 }
 
 .restart:hover {
@@ -331,4 +332,10 @@ input[type="text"] {
 
 .faded {
     filter: blur(8px);
+}
+
+@media (min-width: 1100px) {
+    .versus {
+        justify-content: space-around;
+    }
 }
