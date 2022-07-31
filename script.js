@@ -1,3 +1,4 @@
+// handle display change (page show off)
 const helpers = (() => {
     const show = (element) => element.classList.remove('off');
     const hide = (element) => element.classList.add('off');
@@ -7,6 +8,7 @@ const helpers = (() => {
     return {show, hide, fade, reveal}
 })()
 
+// Player object
 const Player = (name, marker, score) => {
     return  { name, marker, score}
 }
@@ -14,7 +16,7 @@ const Player = (name, marker, score) => {
 let you , foe, opponent, whoIsNext;
 const gamePage = document.querySelector('.game')
 const winPage = document.querySelector('.popup')
-let board = [];
+let board = []; //to check tie!
 
 window.onload = start()
 
@@ -237,4 +239,10 @@ function resetGame() {
         tiles[i].style.pointerEvents = 'auto';
         tiles[i].textContent = ''
     }
+    setTimeout(() => {
+        const winMsg = document.querySelector('.win')
+        winMsg.innerHTML = `<span class="winner">Wade</span> wins !`
+        const cheersImg = document.querySelector('.cheers img')
+        cheersImg.src = "Img/confetti.png"
+    }, 500)
 }

@@ -174,6 +174,8 @@ function resetGame() {
     setTimeout(() => {
         const winMsg = document.querySelector('.win')
         winMsg.innerHTML = `<span class="winner">Wade</span> wins !`
+        const cheersImg = document.querySelector('.cheers img')
+        cheersImg.src = "Img/confetti.png"
     }, 500)
 }
 
