@@ -31,7 +31,7 @@ Tic Tac Toe is known by a few other names around the world. The most common of t
 
 - [x] 👣 **Multiscreen** - multiscreen page: start page, game board, congrats page, etc
 - [x] ⛩️  **Design** - Minimalist stunning design
-- [ ] 🤖 **AI** - an unbeatable AI using the minimax algorithm
+- [x] 🤖 **AI** - an unbeatable AI using the minimax algorithm
 - [ ] 🍕  **MMO** - you can play with your friend online via a link
 - [x] 🗽  **Names** - the interface allow players to put in their names
  
