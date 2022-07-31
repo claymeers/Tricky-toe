@@ -375,3 +375,35 @@ input[type="text"] {
     transform: translateY(0);
     opacity: 1;
 }
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+
+    position: absolute;
+    bottom: 3rem;
+}
+
+footer span {
+    font-size: 2rem;
+    color: #bdbdbd;
+}
+
+.socials i {
+    color: #bdbdbd;
+    transition: all 0.2s ease-in-out
+}
+
+.socials {
+    margin-right: 40px;
+}
+
+.socials a {
+    margin-right: 12px;
+}
+
+.socials a:hover i {
+    color: #333;
+}
