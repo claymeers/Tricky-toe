@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Permanent+Marker&display=swap');
+
+* {
+    font-size: 10px;
+    font-family: 'Cutive Mono', monospace;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #0e1116;
+    background-color: #f7f4f3;
+    display: flex;
+    justify-content: center;
+    /* max-height: 100vh; */
+}
+
+a {
+    text-decoration: none;
+}
+
+.off {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.title {
+    position: absolute;
+    font-size: 2rem;
+    margin-top: 4rem;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease-in-out;
+}
+
+.game {
+    top: 55%;
+}
+
+.gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1.3em);
+    grid-template-rows: repeat(3, 1.3em);
+    align-self: center;
+    font-size: 9rem;
+}
+
+.square {
+    font-size: 90px;
+    border-left: 1px solid #6a706e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    opacity: 0.5;
+    color: #6a706e;
+    font-family: 'Permanent Marker', cursive;
+    transition: all 0.3s ease-in-out;
+}
+
+.square:hover {
+    background-color: #6a716f1f;
+}
+
+.square:nth-child(n + 4) {
+    border-top: 1px solid #6a706e;
+}
+
+.square:nth-child(3n + 1) {
+    border-left: none;
+}
+
+.scoreboard {
+    display: flex;
+    flex-direction: row;
+    margin-top: 6em;
+}
+
+.mask {
+    user-select: none;
+    margin: 0em 3em;
+    opacity: 0.2;
+    min-width: 112px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.name {
+    font-size: 2.3rem;
+    font-weight: normal;
+    transition: all 0.5s ease;
+}
+
+i {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.score {
+    font-size: 7rem;
+    margin: 0.1em 0;
+    text-align: center;
+}
+
+.bar::before {
+    content: '';
+    width: 0;
+    transform: translateX(0);
+    height: 2px;
+    background-color: #0e1116;
+    position: absolute;
+    bottom: -.2rem;
+    left: -10px;
+    border-radius: 25px;
+    transition: all 0.5s ease;
+}
+
+.marker {
+    margin-right: 0.5em;
+}
+
+.mask.active {
+    opacity: 1;
+}
+
+.mask.active .name {
+    font-weight: bold;
+}
+
+.mask.active .bar::before {
+    width: calc(100% + 20px);
+}
+
+.line {
+    color: #000;
+}
+
+.restart {
+    border: none;
+    outline: none;
+    color: #7e7c7c;
+    border-radius: 6px; 
+    padding: .7rem 1rem;
+    font-size: 2.3rem;
+    font-weight: 700;
+    cursor: pointer;
+    opacity: 0.2;
+    transition: all 0.4s ease-in-out;
+    margin-top: 5rem;
+}
+
+.restart:hover {
+    color: #000000d0;
+    opacity: 1;
+}
+
+img {
+    filter: grayscale(1);
+    width: 130px;
+}
+
+.popup {
+    user-select: none;
+}
+
+.win {    
+    /* margin-top: 4rem; */
+    font-size: 4rem;
+    color: #ef5b5b;
+    font-weight: bold;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.win span {
+    font-size: 4rem;
+}
+
+.cheers {
+    position: relative;
+}
+
+.cheers::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 110px;
+    height: 110px;
+    background-color: #7796cb62;
+    border-radius: 50%;
+}
+
+.again {
+    color: #7e7c7c;
+    padding: .7rem 1rem;
+    margin: 1rem 0;
+    font-size: 2.3rem;
+    font-weight: 700;
+    cursor: pointer;
+    opacity: 0.2;
+    transition: all 0.5s ease-in-out;
+}
+
+.again:hover {
+    color: #000000d0;
+    opacity: 1;
+}

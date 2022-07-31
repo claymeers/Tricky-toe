@@ -339,3 +339,39 @@ input[type="text"] {
         justify-content: space-around;
     }
 }
+
+.terminator {
+    position: absolute;
+    bottom: 4rem;
+    right: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.terminator .msg {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    transform: translateY(calc(100% + 15px));
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    font-size: 1.2rem;
+}
+
+.terminator img {
+    filter: grayscale(1);
+    width: 50px;
+    transition: all 0.2s ease-in-out;
+}
+
+.terminator:hover img {
+    filter: grayscale(0)
+}
+
+.terminator:hover .msg {
+    transform: translateY(0);
+    opacity: 1;
+}

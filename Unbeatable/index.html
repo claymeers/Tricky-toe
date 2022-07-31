@@ -4,20 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tricky toe</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="Img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>Unbetable toe</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="title">Tic Tac Toe</h1>
-    <div class="terminator">
-        <p class="msg">Face the invincible AI.</p>
-        <a href="Unbeatable/index.html">
-            <img src="Img/skull.png" alt="" srcset="">
-        </a>
-    </div>
-    <section class="page game off">
+    <h1 class="title">The Unbeatable Toe</h1>
+    <section class="page game">
         <div class="gameboard">
             <div data-index="0" class="square"></div>
             <div data-index="1" class="square"></div>
@@ -30,7 +23,7 @@
             <div data-index="8" class="square"></div>
         </div>
         <div class="scoreboard">
-            <div class="player-scoreboard mask active">
+            <div class="mask active">
                 <p class="score">3</p>
                 <p class="player">
                     <span class="marker"><i class="uil uil-multiply"></i></span>
@@ -38,7 +31,7 @@
                 </p>
                 <span class="bar"></span>
             </div>
-            <div class="player2-scoreboard mask">
+            <div class="mask">
                 <p class="score">1</p>
                 <p class="player">
                     <span class="marker"><i class="uil uil-circle"></i></span>
@@ -47,26 +40,14 @@
                 <span class="bar"></span>
             </div>
         </div>
-        <div class="restart">
-            <i class="uil uil-redo"></i>
-            Start a new game
-        </div>
-    </section>
-    <section class="page start off">
-        <h2>Let's play the <br> Tic-tac-toe game!</h2>
-        <p>Who do you want to play against?</p>
-        <div class="versus">
-            <div class="friend">
-                <img src="Img/friend.png" alt="">
-                <p>friend</p>
+        <a href="../index.html">
+            <div class="restart">
+                <i class="uil uil-redo"></i>
+                Start a new game
             </div>
-            <div class="ai">
-                <img src="Img/ai.png" alt="">
-                <p>ai</p>
-            </div>
-        </div>
+        </a>
     </section>
-    <section class="page popup off">
+    <div class="page popup off">
         <div class="cheers">
             <img src="Img/confetti.png" alt="">
         </div>
@@ -75,25 +56,13 @@
             <i class="uil uil-cloud-showers-alt"></i>
             Play again
         </div>
-        <div class="again new">
-            <i class="uil uil-wind"></i>
-            New opponent
-        </div>
-    </section>
-    <section class="page names off">
-        <h2>What are your names?</h2>
-        <div class="fill">
-            <div class="strange">
-                <input type="text" placeholder="Naveen">
+        <a href="../index.html">
+            <div class="again new">
+                <i class="uil uil-wind"></i>
+                Start a new game
             </div>
-            <div class="strange opponent">
-                <input type="text" placeholder="Craig">
-            </div>
-        </div>
-        <div class="submit">
-            <p>Submit</p>
-        </div>
-    </section>
+        </a>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
