@@ -100,6 +100,7 @@ tiles.forEach((tile, id) => {
             handleTurns()
 
             if (opponent == 'ai') {
+                // Doit changer de position pour aller en haut, when online
                 for (let i = 0; i < tiles.length; i++) {
                     tiles[i].style.pointerEvents = 'none';
                 }

@@ -18,18 +18,30 @@ let aiPlayer = 'o', huPlayer = 'x'
 window.onload = start()
 
 function start() {
+    const namePage = document.querySelector('.names')
+    const namePageInput = document.querySelector('.names input')
+    const namePageSubmit = document.querySelector('.names .submit')
+
     const playerName = document.querySelectorAll('.game .name')
     const playerScore = document.querySelectorAll('.game .score')
 
-    you = Player('Naveen', 'x', 0)
     foe = Player('Gamora', 'o', 0)
-    whoIsNext = you
-    isGameOver = false
 
-    playerName[0].textContent = you.name ? you.name : 'Player 1'
-    playerScore[0].textContent = you.score
-    playerName[1].textContent = foe.name ? foe.name : 'Player 1'
-    playerScore[1].textContent = foe.score
+    namePageSubmit.addEventListener('click', () => {
+        you = Player(namePageInput.value, 'x', 0)
+        playerName[0].textContent = you.name ? you.name : 'You'
+        playerScore[0].textContent = you.score
+
+        playerName[1].textContent = foe.name ? foe.name : 'Bot'
+        playerScore[1].textContent = foe.score
+
+        helpers.hide(namePage)
+        helpers.show(gamePage)
+
+        whoIsNext = you
+    })
+
+    isGameOver = false
 }
 
 const gamePage = document.querySelector('.game')

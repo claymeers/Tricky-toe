@@ -218,3 +218,40 @@ img {
     color: #000000d0;
     opacity: 1;
 }
+
+.names h2 {    
+    font-size: 3.5rem;
+    margin-bottom: 6rem;
+}
+
+.submit p {
+    font-size: 2rem;
+    padding: .7rem 1rem;
+    margin: 5rem 0;
+    font-size: 2.3rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.submit p:hover {
+    transform: scale(1.05);
+}
+
+.fill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type="text"] {
+    margin-left: 3rem;
+    background-color: var(--bg);
+    border: 1px solid #0e11165b;
+    padding: 0.5em;
+    outline: none;
+    height: 20px;
+    width: 220px;
+    font-weight: 100;
+    /* color: #6a706e; */
+    font-size: 2rem;
+}
