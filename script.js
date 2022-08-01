@@ -89,6 +89,7 @@ function start() {
 
 const playersScoreboard = document.querySelectorAll('.game .mask')
 const tiles = document.querySelectorAll('.square')
+const gameBoard = document.querySelector('.gameboard')
 
 tiles.forEach((tile, id) => {
     tile.addEventListener('click', (e) => {
@@ -98,18 +99,12 @@ tiles.forEach((tile, id) => {
             tile.style.pointerEvents = 'none'
             checkWinner(id)
             handleTurns()
-
+            gameBoard.style.pointerEvents = 'none';
             if (opponent == 'ai') {
-                // Doit changer de position pour aller en haut, when online
-                for (let i = 0; i < tiles.length; i++) {
-                    tiles[i].style.pointerEvents = 'none';
-                }
-                let randomTimeDelay = ((Math.random() *1500) + 200).toFixed();
+                let randomTimeDelay = ((Math.random() *1000) + 200).toFixed();
                 setTimeout(() => {
                     bot()
-                    for (let i = 0; i < tiles.length; i++) {
-                        tiles[i].style.pointerEvents = 'auto';
-                    }
+                    gameBoard.style.pointerEvents = 'auto';
                 }, randomTimeDelay)
             }
         }
