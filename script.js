@@ -17,6 +17,7 @@ let you , foe, opponent, whoIsNext;
 const gamePage = document.querySelector('.game')
 const winPage = document.querySelector('.popup')
 let board = []; //to check tie!
+let boardState = [0, 1, 2, 3, 4, 5, 6, 7, 8] //to help pointer events
 
 window.onload = start()
 
@@ -89,22 +90,28 @@ function start() {
 
 const playersScoreboard = document.querySelectorAll('.game .mask')
 const tiles = document.querySelectorAll('.square')
-const gameBoard = document.querySelector('.gameboard')
 
 tiles.forEach((tile, id) => {
     tile.addEventListener('click', (e) => {
         if(!isGameOver) {
             e.target.textContent = whoIsNext.marker
             board.push(id)
+            boardState[id] = whoIsNext.marker
+            for (let i = 0; i < tiles.length; i++) {
+                tiles[i].style.pointerEvents = 'none';
+            }
             tile.style.pointerEvents = 'none'
             checkWinner(id)
             handleTurns()
-            gameBoard.style.pointerEvents = 'none';
             if (opponent == 'ai') {
                 let randomTimeDelay = ((Math.random() *1000) + 200).toFixed();
                 setTimeout(() => {
                     bot()
-                    gameBoard.style.pointerEvents = 'auto';
+                    for (let i = 0; i < boardState.length; i++) {
+                        if (typeof boardState[i] == 'number') {
+                            tiles[i].style.pointerEvents = 'auto';
+                        }
+                    }
                 }, randomTimeDelay)
             }
         }
@@ -147,6 +154,7 @@ function bot() {
         if (array.length > 0) {
             tiles[rdmTile].textContent = whoIsNext.marker
             board.push(rdmTile)
+            boardState[rdmTile] = whoIsNext.marker
             tiles[rdmTile].style.pointerEvents = 'none'
             checkWinner(rdmTile)
             handleTurns()
@@ -235,6 +243,7 @@ function resetGame() {
     helpers.fade(playersScoreboard[1])
     helpers.reveal(playersScoreboard[0])
     board = []
+    boardState = [0, 1, 2, 3, 4, 5, 6, 7, 8]
     isGameOver = false
     for (let i = 0; i < tiles.length; i++) {
         tiles[i].classList.remove('line')

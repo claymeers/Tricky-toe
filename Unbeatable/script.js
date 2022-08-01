@@ -67,8 +67,10 @@ tiles.forEach((tile, id) => {
             let randomTimeDelay = ((Math.random() *1500) + 200).toFixed();
             setTimeout(() => {
                 bot()
-                for (let i = 0; i < tiles.length; i++) {
-                    tiles[i].style.pointerEvents = 'auto';
+                for (let i = 0; i < boardState.length; i++) {
+                    if (typeof boardState[i] == 'number') {
+                        tiles[i].style.pointerEvents = 'auto';
+                    }
                 }
             }, randomTimeDelay)
         }
