@@ -44,9 +44,10 @@ tiles.forEach((tile, id) => {
         if(!isGameOver) {
             e.target.textContent = whoIsNext.marker
             board.push(id)
-
             boardState[id] = whoIsNext.marker
-
+            for (let i = 0; i < tiles.length; i++) {
+                tiles[i].style.pointerEvents = 'none';
+            }
             tile.style.pointerEvents = 'none'
             checkWinner(id)
             handleTurns()
@@ -54,6 +55,9 @@ tiles.forEach((tile, id) => {
             let randomTimeDelay = ((Math.random() *1500) + 200).toFixed();
             setTimeout(() => {
                 bot()
+                for (let i = 0; i < tiles.length; i++) {
+                    tiles[i].style.pointerEvents = 'auto';
+                }
             }, randomTimeDelay)
         }
     })

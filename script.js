@@ -96,6 +96,9 @@ tiles.forEach((tile, id) => {
             e.target.textContent = whoIsNext.marker
             board.push(id)
             tile.style.pointerEvents = 'none'
+            for (let i = 0; i < tiles.length; i++) {
+                tiles[i].style.pointerEvents = 'none';
+            }
             checkWinner(id)
             handleTurns()
 
@@ -103,6 +106,9 @@ tiles.forEach((tile, id) => {
                 let randomTimeDelay = ((Math.random() *1500) + 200).toFixed();
                 setTimeout(() => {
                     bot()
+                    for (let i = 0; i < tiles.length; i++) {
+                        tiles[i].style.pointerEvents = 'auto';
+                    }
                 }, randomTimeDelay)
             }
         }
