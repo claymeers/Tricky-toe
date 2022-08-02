@@ -328,6 +328,11 @@ input[type="text"] {
     font-weight: 100;
     /* color: #6a706e; */
     font-size: 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .faded {
